@@ -1,11 +1,4 @@
-/* TODO: 
 
- - sloji istinski postove
- - promeni logo
- - cropni snimkite pravilno
- - prevurni cvetovete v promenlivi
- - smeni shrifta
- - promeni saita za po-golqma rezoliuciq (144hz monitori)
 
 /* general formatting */
 
@@ -20,7 +13,7 @@ html, body {
     padding: 0px;
 }
 
-h1, h2, h3, h4, h5, h6 /*, logo?*/ {
+h1, h2, h3, h4, h5, h6  {
     font-family: sans-serif;
     margin: 5px;
     color: #333030;
@@ -96,7 +89,7 @@ header .logo-text {
 }
 
 header .logo-text span {
-    color: rgb(0, 62, 143)
+    color: #ffffff
 }
 
 /* Nav Bar */
@@ -176,15 +169,20 @@ header .toggle-menu {
 /* MAIN */
 
 .wrapper {
+    transition: all 0.3s;
     min-height: 100%;
 }
 
 .wrapper a:hover {
     color: #35bbe0;
+    transition: all 0.3s;
 }
 
 /* Post Slider */
 
+.post-slider {
+    position: relative;
+}
 
 .post-slider .slider-title {
     text-align: center;
@@ -193,8 +191,8 @@ header .toggle-menu {
 
 .post-slider .prev {
     position: absolute;
-    top: 37%;
-    left: 30px;
+    top: 250px;
+    left: 5%;
     font-size: 2em;
     color: #006669;
     cursor: pointer;
@@ -202,15 +200,15 @@ header .toggle-menu {
 
 .post-slider .next {
     position: absolute;
-    top: 37%;
-    right: 30px;
+    top: 250px;
+    right: 5%;
     font-size: 2em;
     color: #006669;
     cursor: pointer;
 }
 
 .post-slider .post-wrapper {
-    width: 84%;
+    width: 82%;
     height: 370px;
     margin: 0px auto;
     padding: 10px 0px 10px 0px;
@@ -231,6 +229,7 @@ header .toggle-menu {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    object-position: 100% -10px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -273,9 +272,34 @@ header .toggle-menu {
     float: left;
 }
 
+.content-wrapper .main-content.about {
+    background:white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.content-wrapper .main-content.about .about-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.content-wrapper .main-content.about .post-content {
+    padding: 0 20px;
+}
+
+.content-wrapper .main-content.about .about-image {
+    display: block;
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 50px;
+} 
+
+
 
 .main-content .recent-posts-title {
-    margin: 20px;
+    margin: 30px;
 }
 
 .main-content .post {
@@ -299,7 +323,7 @@ header .toggle-menu {
 .main-content .post .read-more:hover {
     background: #35bbe0;
     color: white !important;
-    transition: .25s;;
+    transition:all .3s;;
 }
 
 .main-content .post .post-image {
@@ -329,6 +353,8 @@ header .toggle-menu {
     float: right;
 }
 
+
+
 .content-wrapper .sidebar .section {
     background: white;
     padding: 20px;
@@ -341,7 +367,7 @@ header .toggle-menu {
 }
 
 .content-wrapper .sidebar .section.search {
-    margin-top: 80px;
+    margin-top: 97px;
 }
 
 .content-wrapper .sidebar .section.topics ul {
@@ -361,7 +387,11 @@ header .toggle-menu {
 
 .content-wrapper .sidebar .section.topics ul li a:hover {
     padding-left: 10px;
-    transition: all/*?*/ 0.3s;
+    transition: all 0.3s;
+}
+
+.content-wrapper .sidebar.about {
+    padding: 0px 10px;
 }
 
 
@@ -370,7 +400,7 @@ header .toggle-menu {
 .footer {
     background: #333030;
     color: #dfdfdf;
-    height: 400px;
+    height: 370px;
     position: relative;
 }
 
@@ -379,16 +409,73 @@ header .toggle-menu {
 }
 
 .footer .footer-content {
-    height: 350px;
+    height: 370px;
     display: flex;
 }
 
 .footer-content .footer-section {
     flex: 1;
     padding: 25px;
+    border-right: 1px solid white;
 }
 
+.footer-content .about .contact-info span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
 
+.footer-content .about p {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-content .about .socials a {
+    width: 45px;
+    height: 40px;
+    padding-top: 5px;
+    margin-right: 15px;
+    font-size: 1.1em;
+    transition: 0.4s;
+}
+
+.footer-content .links ul a{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    transition: all 0.3s;
+}
+
+.footer-content .links ul a:hover {
+    color: white;
+    transition: all 0.3s;
+    margin-left: 15px;
+
+}
+
+.footer-content .about .socials a:hover {
+    color: white;
+    transition: 0.4s;
+}
+
+.footer-content .contact-form h2{
+    margin-bottom: 25px;
+}
+
+.footer-content .contact-form .contact-input {
+    margin-top: 10px;
+    line-height: 1.2em;
+}
+
+.footer-content .contact-form .contact-input:focus {
+    background: #eeeeee;
+}
+
+.btn.send {
+    margin-top: 10px;
+    width: 100%;
+    
+}
 
 .footer .footer-bottom {
     display: flex;
@@ -407,6 +494,44 @@ header .toggle-menu {
 
 
 /* Media Queries */
+
+@media only screen and (max-width: 940px) {
+    .content-wrapper {
+        width: 100%;
+        margin: 30px auto 30px;
+    }
+
+    .content-wrapper .main-content {
+        width: 100%; 
+    }
+
+    .content-wrapper .sidebar {
+        width: 100%;
+        height: 500px;
+        padding: 10px;
+    }
+
+    .content-wrapper .sidebar .section.search {
+        margin-top: 30px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-section {
+        border-bottom: 1px solid white;
+    }
+
+    .footer .footer-content {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .footer-content .contact-form {
+        padding-bottom: 70px;
+    }
+}
 
 @media only screen and (max-width: 750px) {
     header {
@@ -440,7 +565,7 @@ header .toggle-menu {
     }
     
     header .logo-text span {
-        color: #003e8f
+        color: #ffffff;
     }
 
     header ul {
@@ -487,4 +612,26 @@ header .toggle-menu {
 
     
     
+}
+
+@media only screen and (max-width: 600px) {
+    .main-content .post {
+        height: auto;
+    }
+
+    .main-content .post .post-image {
+        width: 100%;
+    }
+    
+    .main-content .post .post-preview {
+        width: 100%;
+       
+    }
+
+    .main-content .post .read-more {
+        position: static;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
