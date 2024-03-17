@@ -610,7 +610,19 @@ header .toggle-menu {
         transition: 0.5s;
     }
 
+    .post-slider .prev {
+    position: relative;
+    top: 200px;
+    left: 5%;
     
+    }
+
+    .post-slider .next {
+    position: relative;
+    top: 200px;
+    right: -89%;
+    text-align: right;
+    }
     
 }
 
